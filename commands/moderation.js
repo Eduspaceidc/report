@@ -164,7 +164,7 @@ export async function sendReport(sock, msg, args, config, sender, from) {
     const texto = `> 📢 *REPORTE - ${groupType.toUpperCase()}*\n\n` +
       `*Expulsión realizada por*: @${senderNumberFormatted}\n` +
       `👤 *Usuario expulsado*: @${userToKick.split('@')[0]}\n` +
-      `📆 *Fecha (Colombia)*: ${fecha}\n` +
+      `📆 *Fecha (servidor)*: ${fecha}\n` +
       `⚠️ *Motivo*: ${motivo}\n` +
       `🏷️ *Grupo origen*: ${groupType.toUpperCase()}`;
 

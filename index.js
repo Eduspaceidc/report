@@ -27,10 +27,12 @@ async function startBot() {
 
         // ✅ Mostrar el QR correctamente
         if (qr) {
-            console.clear();
-            console.log("\n🟢 Escanea este código QR con tu WhatsApp:\n");
-            qrcode.generate(qr, { small: true });
-        }
+    console.log("\n📲 Escanea el QR desde este link:\n");
+    console.log(
+        `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(qr)}`
+    );
+}
+
 
         if (connection === "close") {
             const reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
